@@ -32,3 +32,8 @@ Route::get("/kenalan/{nama}/{npm}", function($nama, $npm){
     $data = ['nama' => $nama , 'npm' => $npm];
     return view("hello", $data);
 });
+
+Route::get('/mahasiswa/insert',.[MahasiswaController::class,.'insert']);
+Route::get('/mahasiswa/update',.[MahasiswaController::class,.'update']);
+Route::get('/mahasiswa/delete',.[MahasiswaController::class,.'delete']);
+Route::get('/mahasiswa/select',.[MahasiswaController::class,.'select']);
